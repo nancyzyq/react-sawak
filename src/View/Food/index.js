@@ -6,7 +6,9 @@ class Food extends Component {
 	}
   render() {
     return (
-      <div>Food</div>
+        <div>
+            Food Page
+        </div>
     )
   }
 }
