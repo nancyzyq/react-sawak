@@ -11,12 +11,12 @@
 // }
 import { configureStore } from '@reduxjs/toolkit'
 import { combineReducers } from 'redux'
-import foodReducer from './Food/reducer'
+import menuReducer from './Menu/reducer'
 
 const reducer = combineReducers({
 	// Home: homeReducer,
 	// Place: placeReducer,
-	Food: foodReducer
+	Menu: menuReducer
 	// User: userReducer
 })
 

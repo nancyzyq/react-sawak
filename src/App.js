@@ -6,7 +6,7 @@ import {
 import logo from './logo.svg';
 import './App.css';
 import Home from './View/Home'
-import Food from './View/Food'
+import Menu from './View/Menu'
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/food" element={<Food />} />
+          <Route path="/menu" element={<Menu />} />
         </Routes>
       </Router>
     </div>
