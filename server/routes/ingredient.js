@@ -1,4 +1,5 @@
 const IngredientController = require('../controllers/IngredientController')
+// const UserController = require('../controllers/UserController')
 
 function ingredientGetHandler (req, res, next) {
     if (req.query.id) {
@@ -8,14 +9,44 @@ function ingredientGetHandler (req, res, next) {
             res.status(500).send('err')
         })
     } else {
-        // console.log('ingredient')
         IngredientController.getIngredients().then((data) => {
-            // console.log(data)
             res.status(200).send(data)
         }).catch((error) => {
             res.status(500).send('err')
         })
     }
+}
+
+function ingredientCreateHandler (req, res, next) {
+    // console.log('aa', req.body.ingredient)
+    IngredientController.createIngredient(req.body.ingredient).then((data) => {
+        // console.log(data)
+        res.status(200).send(data)
+    }).catch((error) => {
+        console.log(error)
+        res.status(500).send('err')
+    })
+}
+
+function ingredientPostHandler (req, res, next) {
+    IngredientController.updateIngredient(req.body.ingredient).then((data) => {
+        // console.log(data)
+        res.status(200).send(data)
+    }).catch((error) => {
+        console.log(error)
+        res.status(500).send('err')
+    })
+    // res.status(200).send('done')
+}
+
+function ingredientDeleteHandler (req, res, next) {
+    // console.log(req.query.id)
+    IngredientController.deleteIngredient(req.query.id).then((data) => {
+        res.status(200).send(data)
+    }).catch((error) => {
+        console.log(error)
+        res.status(500).send('err')
+    })
 }
 
 module.exports = function (server) {

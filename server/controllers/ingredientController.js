@@ -9,8 +9,8 @@ function getIngredients () {
                 'id' :1,
                 'name': 1,
                 // 'type': 1,
-                // 'created': 1,
-                // 'updated': 1 
+                'created': 1,
+                'updated': 1 
             }
         //     , function (err, data) {
         //     if (err) reject(err)

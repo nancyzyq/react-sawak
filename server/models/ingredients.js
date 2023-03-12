@@ -2,10 +2,10 @@ var mongoose = require('mongoose')
 
 var ingredientsSchema = new mongoose.Schema({
   id: String,
-  name: String
+  name: String,
 //   type: String,
-//   created: { type: Date, default: Date.now},
-//   updated:{ type: Date, default: Date.now }
+  created: { type: Date, default: Date.now},
+  updated:{ type: Date, default: Date.now }
 },
 { collection: 'ingredients' })
 

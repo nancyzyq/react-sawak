@@ -2,9 +2,10 @@ const express = require('express')
 var cors = require('cors')
 var mongoose = require('mongoose')
 const ingredientRouter = require('./routes/ingredient')
+const categoryRouter = require('./routes/category')
 
 const server = express()
-const port = 3000
+const port = 3001
 
 server.use(cors())
 
@@ -34,4 +35,5 @@ server.get('/', (req, res, next) => res.send('Hello World!'))
 server.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 ingredientRouter(server)
+categoryRouter(server)
 
