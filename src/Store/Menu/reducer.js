@@ -6,13 +6,16 @@ const menuSlice = createSlice({
     name: 'menu',
     initialState: {
         menu: [],
-        itemToEdit: {},
+        menuItemToEdit: {},
         ingredients: [],
         categories: []
     },
     reducers: {
         updateMenu: (state, action) => {
             state.menu = action.payload
+        },
+        updateIngredients: (state, action) => {
+            state.ingredients = action.payload
         }
     }
 
@@ -36,5 +39,5 @@ const menuSlice = createSlice({
 // )
 
 // export default menuReducer
-export const { updateMenu } = menuSlice.actions
+export const { updateMenu, updateIngredients } = menuSlice.actions
 export default menuSlice.reducer
