@@ -3,6 +3,8 @@ var cors = require('cors')
 var mongoose = require('mongoose')
 const ingredientRouter = require('./routes/ingredient')
 const categoryRouter = require('./routes/category')
+const userRouter = require('./routes/user')
+const menuitmeRouter = require('./routes/menuitem')
 
 const server = express()
 const port = 3001
@@ -36,4 +38,6 @@ server.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 ingredientRouter(server)
 categoryRouter(server)
+userRouter(server)
+menuitmeRouter(server)
 

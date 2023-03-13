@@ -2,7 +2,7 @@ var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 // mongoose.set('debug', true)
 // PLU model define
-var menuSchema = new mongoose.Schema({
+var menuitemsSchema = new mongoose.Schema({
   id: String,
   name: String,
   type: { type: Schema.Types.ObjectId, ref: 'categories' },
@@ -15,8 +15,8 @@ var menuSchema = new mongoose.Schema({
   created: { type: Date, default: Date.now},
   updated:{ type: Date, default: Date.now }
 },
-{ collection: 'menu' })
+{ collection: 'menuitems' })
 
 // foodSchema.index({ id:1 })
 
-module.exports = mongoose.model('menu', menuSchema)
+module.exports = mongoose.model('menuitems', menuitemsSchema)

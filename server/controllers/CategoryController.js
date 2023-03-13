@@ -1,8 +1,7 @@
-var categoryController = {}
+var CategoryController = {}
 var categories = require('../models/categories')
 
 function getCategories () {
-    console.log('controller')
     return new Promise((resolve, reject) => {
         categories.find({}, { 
                 '_id': 1,
@@ -26,6 +25,6 @@ function getCategories () {
     })
 }
 
-categoryController.getCategories = getCategories
+CategoryController.getCategories = getCategories
 
-module.exports = categoryController
+module.exports = CategoryController

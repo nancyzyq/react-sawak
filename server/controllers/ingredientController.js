@@ -1,4 +1,4 @@
-var ingredientController = {}
+var IngredientController = {}
 var ingredients = require('../models/ingredients')
 
 function getIngredients () {
@@ -80,9 +80,9 @@ function deleteIngredient (id) {
     })
 }
 
-ingredientController.getIngredients = getIngredients
-ingredientController.updateIngredient = updateIngredient
-ingredientController.createIngredient = createIngredient
-ingredientController.deleteIngredient = deleteIngredient
+IngredientController.getIngredients = getIngredients
+IngredientController.updateIngredient = updateIngredient
+IngredientController.createIngredient = createIngredient
+IngredientController.deleteIngredient = deleteIngredient
 
-module.exports = ingredientController
+module.exports = IngredientController
